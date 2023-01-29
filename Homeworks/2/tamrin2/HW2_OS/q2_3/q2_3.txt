@@ -1,0 +1,31 @@
+multithreading vs multiprocessing: what's the difference? source : https://towardsdatascience.com/multithreading-and-multiprocessing-in-10-minutes-20d9b3c6a867
+
+By formal definition, multithreading refers to the ability of a processor to execute
+multiple threads concurrently, where each thread runs a process. Whereas multiprocessing 
+refers to the ability of a system to run multiple processors concurrently, where each processor
+can run one or more threads.
+From the diagram above, we can see that in multithreading (middle diagram), multiple threads
+share the same code, data, and files but run on a different register and stack.
+Multiprocessing (right diagram) multiplies a single processor — replicating the code,
+data, and files, which incurs more overhead.
+Note that using multithreading for CPU-bound processes might slow down performance due
+to competing resources that ensure only one thread can execute at a time, and overhead is
+incurred in dealing with multiple threads.
+
+On the other hand, multiprocessing can be used for IO-bound processes.
+However, overhead for managing multiple processes is higher than managing multiple threads as illustrated
+above. You may notice that multiprocessing might lead to higher CPU utilization due
+to multiple CPU cores being used by the program, which is expected.
+
+
+How is memory in multithreading and multiprocessing?
+Multi-threading gets around requiring additional memory because it relies on a shared memory
+between threads. Shared memory removes the additional memory overhead but still incurs
+the penalty of increased context switching. Multiprocessing is used to create a more reliable
+system, whereas multithreading is used to create threads that run parallel to each other.
+multithreading is quick to create and requires few resources, whereas multiprocessing requires
+a significant amount of time and specific resources to create.
+Is multithreading faster than multiprocessing?
+Threads are faster to start than processes and also faster in task-switching. 
+All Threads share a process memory pool that is very beneficial. Takes lesser time to create a new thread 
+in the existing process than a new process.

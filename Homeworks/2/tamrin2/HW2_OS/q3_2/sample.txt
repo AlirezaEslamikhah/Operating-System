@@ -1,0 +1,7 @@
+sample0 aaaaa bbbbb ccccc 
+sample1 aaaaa bbbbb ccccc 
+sample2 aaaaa bbbbb ccccc 
+sample3 aaaaa bbbbb ccccc 
+sample4 aaaaa bbbbb ccccc 
+sample5 aaaaa bbbbb ccccc 
+sample6 aaaaa bbbbb ccccc 
